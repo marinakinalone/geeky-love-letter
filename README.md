@@ -1,14 +1,14 @@
 # Geeky Love Letter
-Kinalone Dev is my professional website to share my code projects (portfolio), bio, resume and contact info.
+A text to binary converter, made cuter to send (not-so) secret love letters to your nerd crush.
 
 ## Built with 
 
 - HTML
-- CSS
+- CSS & SCSS
 - Javascript & ReactJS
 
 ## What's next to do?
-[See to-do list on Notion](https://marinakinalone.notion.site/Tasks-for-kinalone-dev-2b7d7986283e464b8cedde8cf902d80e)
+*to add at the end of the project*
 
 ## Team
 
