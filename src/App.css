@@ -1,38 +1,107 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #a1d4d0;
+  font-family: "Fira Code", monospace;
+}
+
+textarea {
+  background-color: #1a1a1a;
+  color: #a1d4d0;
+  font-size: 1rem;
+  font-family: "Fira Code", monospace;
+  min-width: 95%;
+  border: 2px solid #a1d4d0;
+  border-radius: 15px;
+  padding: 0.5rem;
+  word-break: keep-all;
+}
+
+a {
+  color: #a1d4d0;
+}
+
+a:hover {
+  color: #f2a3c2;
+}
+
+a:active,
+a :focus {
+  outline: 2px dotted #b9a9d2;
+}
+
+h1 {
+  font-family: "Press Start 2P", cursive;
+  margin-bottom: -1rem;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 1.3rem;
+}
+
+.pink {
+  color: #f2a3c2;
+}
+
+.binary {
+  font-size: 0.9rem;
+}
+
+header,
+footer {
+  margin: 0rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  margin-bottom: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (min-width: 800px) {
+  .main_container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    border: 1px solid yellowgreen;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sub_container {
+  word-break: break-all;
 }
+
+.sub_container label {
+  display: none;
+}
+
+#text_editor {
+  border: 1px solid orangebird;
+}
+/*# sourceMappingURL=App.css.map */

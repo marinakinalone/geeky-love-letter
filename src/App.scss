@@ -1,0 +1,131 @@
+//VARIABLES
+
+//colors
+$primary_black: #1a1a1a;
+$primary_blue: #a1d4d0;
+$primary_pink: #f2a3c2;
+$secondary_purple: #b9a9d2;
+
+//fonts
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+
+
+//########
+//MIXINS
+
+@mixin min_width_tablet {
+  @media screen and (min-width: "800px") {
+    @content;
+  }
+}
+
+//########
+//STYLING
+
+//base
+html {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $primary_black;
+  color: $primary_blue;
+  font-family: "Fira Code", monospace;
+}
+
+textarea {
+  background-color: $primary_black;
+  color: $primary_blue;
+  font-size: 1rem;
+  font-family: "Fira Code", monospace;
+  min-width: 95%;
+  border: 2px solid $primary_blue;
+  border-radius: 15px;
+  padding: 0.5rem;
+  word-break: keep-all;
+}
+
+a {
+  color: $primary_blue;
+  &:hover {
+    color: $primary_pink;
+  }
+  &:active,
+  :focus {
+    outline: 2px dotted $secondary_purple;
+  }
+}
+
+h1 {
+  font-family: "Press Start 2P", cursive;
+  margin-bottom: -1rem;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 1.3rem;
+}
+
+
+.pink {
+  color: $primary_pink;
+}
+
+.binary {
+  font-size: 0.9rem;
+}
+
+//layout - header & footer
+header,
+footer {
+  margin: 0rem;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+
+//layout - main container
+.main_container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+  @include min_width_tablet(){
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid yellowgreen;
+  }
+
+}
+
+//layout - sub container
+.sub_container {
+  word-break: break-all;
+  
+  // @include min_width_tablet(){
+  //  width: 45%;
+  // 
+  // }
+  label {
+    display: none;
+  }
+}
+
+#text_editor {
+  border: 1px solid orangebird;
+}
+
+//layout - share container
+
+
+//component - primary button
+
+//component - secondary button
