@@ -27,7 +27,6 @@ textarea {
   border-radius: 15px;
   padding: 0.5rem;
   word-break: keep-all;
-  min-width: 95%;
   height: 15rem;
 }
 
@@ -100,16 +99,30 @@ footer {
   }
 }
 
-.sub_container {
-  word-break: break-all;
-}
-
 .sub_container label {
   display: none;
 }
 
 #binary_generator {
   margin-bottom: 2rem;
+  color: #b9a9d2;
+}
+
+#binary_content {
+  color: #1a1a1a;
+  background-color: #b9a9d2;
+  min-width: 95%;
+  border: 2px solid #b9a9d2;
+  border-radius: 15px;
+  padding: 0.5rem;
+  word-break: break-all;
+  height: 15rem;
+}
+
+@media screen and (min-width: 768px) {
+  #binary_content {
+    max-width: 95%;
+  }
 }
 
 .share_container {

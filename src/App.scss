@@ -56,7 +56,6 @@ textarea {
   border-radius: 15px;
   padding: 0.5rem;
   word-break: keep-all;
-  min-width: 95%;
   height: 15rem;
 }
 
@@ -124,7 +123,6 @@ footer {
 
 //layout - sub container
 .sub_container {
-  word-break: break-all;
   label {
     display: none;
   }
@@ -132,6 +130,21 @@ footer {
 
 #binary_generator {
   margin-bottom: 2rem;
+  color: $secondary_purple;
+}
+
+#binary_content {
+  color: $primary_black;
+  background-color: $secondary_purple;
+  min-width: 95%;
+  border: 2px solid $secondary_purple;
+  border-radius: 15px;
+  padding: 0.5rem;
+  word-break: break-all;
+  height: 15rem;
+  @include min_width_tablet(){
+    max-width: 95%;
+  }
 }
 
 //layout - share_container 
