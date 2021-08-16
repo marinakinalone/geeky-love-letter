@@ -10,12 +10,19 @@ $secondary_purple: #b9a9d2;
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
 
+$fira: "Fira Code", monospace;
 
-//########
+//#######
 //MIXINS
 
 @mixin min_width_tablet {
-  @media screen and (min-width: "800px") {
+  @media screen and (min-width: "768px") {
+    @content;
+  }
+}
+
+@mixin min_width_desktop {
+  @media screen and (min-width: "1024px") {
     @content;
   }
 }
@@ -36,19 +43,21 @@ html {
 body {
   background-color: $primary_black;
   color: $primary_blue;
-  font-family: "Fira Code", monospace;
+  font-family: $fira;
 }
 
 textarea {
   background-color: $primary_black;
   color: $primary_blue;
   font-size: 1rem;
-  font-family: "Fira Code", monospace;
+  font-family: $fira;
   min-width: 95%;
   border: 2px solid $primary_blue;
   border-radius: 15px;
   padding: 0.5rem;
   word-break: keep-all;
+  min-width: 95%;
+  height: 15rem;
 }
 
 a {
@@ -57,8 +66,9 @@ a {
     color: $primary_pink;
   }
   &:active,
-  :focus {
+  &:focus {
     outline: 2px dotted $secondary_purple;
+    outline-offset: 0.2rem;
   }
 }
 
@@ -70,6 +80,7 @@ h1 {
 h2 {
   font-weight: normal;
   font-size: 1.3rem;
+  margin-bottom: 0;
 }
 
 
@@ -78,13 +89,12 @@ h2 {
 }
 
 .binary {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 //layout - header & footer
 header,
 footer {
-  margin: 0rem;
   text-align: center;
 }
 
@@ -92,16 +102,22 @@ header {
   margin-bottom: 2rem;
 }
 
+footer {
+  font-size: 0.8rem;
+  margin: 0 1rem;
+}
 
 //layout - main container
+
 .main_container {
   display: flex;
   flex-direction: column;
   margin: 0 1rem;
   @include min_width_tablet(){
-    flex-direction: row;
-    justify-content: space-around;
-    border: 1px solid yellowgreen;
+    margin: 0 10%;
+  }
+  @include min_width_desktop(){
+    margin: 0 15%;
   }
 
 }
@@ -109,23 +125,53 @@ header {
 //layout - sub container
 .sub_container {
   word-break: break-all;
-  
-  // @include min_width_tablet(){
-  //  width: 45%;
-  // 
-  // }
   label {
     display: none;
   }
 }
 
-#text_editor {
-  border: 1px solid orangebird;
+#binary_generator {
+  margin-bottom: 2rem;
 }
 
-//layout - share container
+//layout - share_container 
+.share_container {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+//component - buttons
+
+.primary_button {
+  font-size: 1rem;
+  border: 2px solid $primary_pink;
+  border-radius: 15px;
+  background-color: $primary_black;
+  color: $primary_pink;
+  cursor: pointer;
+  font-family: $fira;
+  padding: 0.5rem;
+  &:hover {
+    background-color: $primary_pink;
+    color: white;
+    box-shadow: 0px 0px 99px 2px $primary_pink;
+  }
+}
+
+.secondary_button {
+  font-size: 1rem;
+  border: none;
+  text-decoration: underline;
+  color: $primary_pink;
+  background-color: $primary_black;
+  cursor: pointer;
+  font-family: $fira;
+  &:hover {
+    background-color: $primary_pink;
+    color: white;
+    box-shadow: 0px 0px 99px 2px $primary_pink;
+  }
+}
 
 
-//component - primary button
 
-//component - secondary button

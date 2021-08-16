@@ -27,6 +27,8 @@ textarea {
   border-radius: 15px;
   padding: 0.5rem;
   word-break: keep-all;
+  min-width: 95%;
+  height: 15rem;
 }
 
 a {
@@ -37,9 +39,9 @@ a:hover {
   color: #f2a3c2;
 }
 
-a:active,
-a :focus {
+a:active, a:focus {
   outline: 2px dotted #b9a9d2;
+  outline-offset: 0.2rem;
 }
 
 h1 {
@@ -50,6 +52,7 @@ h1 {
 h2 {
   font-weight: normal;
   font-size: 1.3rem;
+  margin-bottom: 0;
 }
 
 .pink {
@@ -57,17 +60,21 @@ h2 {
 }
 
 .binary {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 header,
 footer {
-  margin: 0rem;
   text-align: center;
 }
 
 header {
   margin-bottom: 2rem;
+}
+
+footer {
+  font-size: 0.8rem;
+  margin: 0 1rem;
 }
 
 .main_container {
@@ -81,15 +88,15 @@ header {
   margin: 0 1rem;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
   .main_container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    border: 1px solid yellowgreen;
+    margin: 0 10%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main_container {
+    margin: 0 15%;
   }
 }
 
@@ -101,7 +108,47 @@ header {
   display: none;
 }
 
-#text_editor {
-  border: 1px solid orangebird;
+#binary_generator {
+  margin-bottom: 2rem;
+}
+
+.share_container {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.primary_button {
+  font-size: 1rem;
+  border: 2px solid #f2a3c2;
+  border-radius: 15px;
+  background-color: #1a1a1a;
+  color: #f2a3c2;
+  cursor: pointer;
+  font-family: "Fira Code", monospace;
+  padding: 0.5rem;
+}
+
+.primary_button:hover {
+  background-color: #f2a3c2;
+  color: white;
+  -webkit-box-shadow: 0px 0px 99px 2px #f2a3c2;
+          box-shadow: 0px 0px 99px 2px #f2a3c2;
+}
+
+.secondary_button {
+  font-size: 1rem;
+  border: none;
+  text-decoration: underline;
+  color: #f2a3c2;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  font-family: "Fira Code", monospace;
+}
+
+.secondary_button:hover {
+  background-color: #f2a3c2;
+  color: white;
+  -webkit-box-shadow: 0px 0px 99px 2px #f2a3c2;
+          box-shadow: 0px 0px 99px 2px #f2a3c2;
 }
 /*# sourceMappingURL=App.css.map */
