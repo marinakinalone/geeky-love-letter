@@ -160,14 +160,22 @@ footer {
   border: 2px solid $primary_pink;
   border-radius: 15px;
   background-color: $primary_black;
-  color: $primary_pink;
+  
   cursor: pointer;
   font-family: $fira;
   padding: 0.5rem;
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     background-color: $primary_pink;
-    color: white;
     box-shadow: 0px 0px 99px 2px $primary_pink;
+    a {
+      color: white;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $primary_pink;
   }
 }
 

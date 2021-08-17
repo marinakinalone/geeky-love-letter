@@ -14,7 +14,8 @@ class App extends React.Component{
     handleChange(event) {
     this.setState({
       input: event.target.value,
-      binary: convertToBinary(event.target.value)
+      binary: convertToBinary(event.target.value),
+      email: `mailto:?subject=Here is a message from geeky-love-letter&body=${convertToBinary(event.target.value)}`
     })
   }
  
@@ -26,10 +27,7 @@ class App extends React.Component{
       <div className="main_container">
         <TextContent input={this.state.input} handleChange={this.handleChange}/>
         <BinaryContent output={this.state.binary} />
-        <div className="share_container">
-          <button onclick="#" class="primary_button">send your letter</button>
-          <p>or <button onClick={selectAndCopy}class="secondary_button" id="copy_button">copy binary version</button></p>
-        </div>
+        <ShareContainer email={this.state.email} />
       </div>
       <Footer />
     </div>
@@ -81,6 +79,18 @@ class BinaryContent extends React.Component{
         <h2>binary generator</h2>
         <textarea id="binary_content" value={this.props.output} readonly></textarea>
     </div>
+    )
+  }
+}
+
+
+class ShareContainer extends React.Component{
+  render() {
+    return (
+      <div className="share_container">
+        <button class="primary_button"><a href={this.props.email}>send your letter</a></button>
+        <p>or <button onClick={selectAndCopy}class="secondary_button" id="copy_button">copy binary version</button></p>
+      </div>
     )
   }
 }

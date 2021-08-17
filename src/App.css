@@ -135,17 +135,24 @@ footer {
   border: 2px solid #f2a3c2;
   border-radius: 15px;
   background-color: #1a1a1a;
-  color: #f2a3c2;
   cursor: pointer;
   font-family: "Fira Code", monospace;
   padding: 0.5rem;
 }
 
-.primary_button:hover {
+.primary_button:hover, .primary_button:focus, .primary_button:active {
   background-color: #f2a3c2;
-  color: white;
   -webkit-box-shadow: 0px 0px 99px 2px #f2a3c2;
           box-shadow: 0px 0px 99px 2px #f2a3c2;
+}
+
+.primary_button:hover a, .primary_button:focus a, .primary_button:active a {
+  color: white;
+}
+
+.primary_button a {
+  text-decoration: none;
+  color: #f2a3c2;
 }
 
 .secondary_button {
