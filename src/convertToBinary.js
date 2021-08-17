@@ -3,8 +3,14 @@
 var convertToBinary = function(input) {
     let output = [];
     for (let i = 0; i < input.length; i++) {
-        let bin = input[i].charCodeAt().toString(2);
+        if (input[i] == "\n") {
+            output.push('\n')
+        } else {
+            let bin = input[i].charCodeAt().toString(2);
         output.push(Array(8 - bin.length +1 ).join("0") + bin)
+
+        }
+        
     }
     return output.join("")
 }
