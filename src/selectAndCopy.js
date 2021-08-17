@@ -3,7 +3,7 @@ const selectAndCopy = async () => {
     binary.focus();
     binary.select();
     await document.execCommand("copy");
-    alert('Text copied');
+    alert('Binary content copied');
   }
   
 export {selectAndCopy}
