@@ -77,7 +77,7 @@ class BinaryContent extends React.Component{
     return (
       <div className="sub_container" id="binary_generator">
         <h2>binary generator</h2>
-        <p id="binary_content">{this.props.output}</p>
+        <textarea id="binary_content" value={this.props.output} readonly></textarea>
     </div>
     )
   }
