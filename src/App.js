@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import {convertToBinary} from './convertToBinary.js';
+import {selectAndCopy} from './selectAndCopy.js';
 
 class App extends React.Component{
   constructor(props) {
@@ -16,6 +17,7 @@ class App extends React.Component{
       binary: convertToBinary(event.target.value)
     })
   }
+ 
 
   render() {
   return (
@@ -26,7 +28,7 @@ class App extends React.Component{
         <BinaryContent output={this.state.binary} />
         <div className="share_container">
           <button onclick="#" class="primary_button">send your letter</button>
-          <p>or <button onclick="#" class="secondary_button">copy binary version</button></p>
+          <p>or <button onClick={selectAndCopy}class="secondary_button" id="copy_button">copy binary version</button></p>
         </div>
       </div>
       <Footer />
