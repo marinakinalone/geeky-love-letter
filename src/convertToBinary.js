@@ -1,15 +1,13 @@
-let input = "hello world";
-let output = "0110100001100101011011000110110001101111001000000111011101101111011100100110110001100100"
+// https://stackoverflow.com/questions/14430633/how-to-convert-text-to-binary-code-in-javascript
 
 var convertToBinary = function(input) {
-    let result = []
-    for (var i = 0; i < input.length; i++) {
-        result += input[i].charCodeAt(0).toString(2) + "0";
+    let output = [];
+    for (let i = 0; i < input.length; i++) {
+        let bin = input[i].charCodeAt().toString(2);
+        output.push(Array(8 - bin.length +1 ).join("0") + bin)
     }
-    return result
-
-
+    return output.join("")
 }
 
-console.log(convertToBinary(input))
 
+export {convertToBinary}

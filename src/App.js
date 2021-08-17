@@ -1,5 +1,6 @@
 import './App.css';
 import React from 'react';
+import {convertToBinary} from './convertToBinary.js';
 
 class App extends React.Component{
   constructor(props) {
@@ -12,7 +13,7 @@ class App extends React.Component{
     handleChange(event) {
     this.setState({
       input: event.target.value,
-      binary: event.target.value
+      binary: convertToBinary(event.target.value)
     })
   }
 
@@ -35,10 +36,6 @@ class App extends React.Component{
 }
 
 class Header extends React.Component{
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <header className="title">
@@ -50,10 +47,6 @@ class Header extends React.Component{
 }
 
 class Footer extends React.Component{
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <footer>
@@ -66,10 +59,6 @@ class Footer extends React.Component{
 
 
 class TextContent extends React.Component{
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="sub_container" id="text_editor">
@@ -84,10 +73,6 @@ class TextContent extends React.Component{
 }
 
 class BinaryContent extends React.Component{
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="sub_container" id="binary_generator">
