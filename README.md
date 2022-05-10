@@ -18,8 +18,9 @@ For fun:
 - animated neon effect on Love in header
 - add emojis or animations on special words or characters
 - ...reverse the converter from binary to text (pfiou!)
-
- 
+- refactor code to use function-based components
+## What I have learned from this project
+todo
 ## Team
 
 [![Marina Kinalone Simonnet](https://avatars.githubusercontent.com/u/63544936?v=3&s=144)](https://github.com/marinakinalone) |
