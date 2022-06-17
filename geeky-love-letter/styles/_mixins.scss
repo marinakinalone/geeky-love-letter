@@ -1,0 +1,11 @@
+@mixin min_width_tablet {
+    @media screen and (min-width: "768px") {
+      @content;
+    }
+  }
+  
+  @mixin min_width_desktop {
+    @media screen and (min-width: "1024px") {
+      @content;
+    }
+  }

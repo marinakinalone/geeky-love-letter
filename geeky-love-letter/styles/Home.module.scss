@@ -1,0 +1,32 @@
+@import
+  'mixins',
+  'variables';
+
+.pink {
+  color: $primary_pink;
+}
+
+.binary {
+  font-size: 0.8rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+  @include min_width_tablet(){
+    margin: 0 10%;
+  }
+  @include min_width_desktop(){
+    margin: 0 15%;
+  }
+}
+
+.header {
+  text-align: center;
+}
+
+.header__title {
+  font-family: $press_start;
+  margin-bottom: -1rem;
+}
