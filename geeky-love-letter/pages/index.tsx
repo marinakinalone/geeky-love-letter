@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { Header, Footer } from '../components/index'
+import { Header, Footer, TextContent, BinaryContent, ShareOptions } from '../components/index'
 
 import styles from '../styles/Home.module.scss'
 
@@ -14,6 +14,9 @@ const Home: NextPage = () => {
       </Head>
       <main className={styles.main}>
         <Header />
+        <TextContent />
+        <BinaryContent />
+        <ShareOptions />
         <Footer />
 
       </main>

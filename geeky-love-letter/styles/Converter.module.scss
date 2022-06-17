@@ -1,0 +1,50 @@
+@import
+  'mixins',
+  'variables';
+
+
+.container {
+    label {
+        display: none;
+    }
+}
+
+.container__title {
+    font-weight: normal;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+.container__binary {
+    margin-bottom: 2rem;
+}
+
+.container__content { 
+    font-size: 1rem;
+    font-family: $fira;
+    min-width: 95%;
+    border-radius: 15px;
+    padding: 0.5rem;
+    word-break: keep-all;
+    height: 15rem;
+}
+
+.content__text {
+    background-color: $primary_black;
+    color: $primary_blue;
+    border: 2px solid $primary_blue;
+}
+
+.content__binary {
+    color: $primary_black;
+    background-color: $secondary_purple;
+    border: 2px solid $secondary_purple;
+    @include min_width_tablet(){
+        max-width: 95%;
+    }
+}
+
+.title__binary {
+    color: $secondary_purple;
+
+}
