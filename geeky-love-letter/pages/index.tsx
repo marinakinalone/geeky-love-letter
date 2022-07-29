@@ -11,6 +11,7 @@ const Home: NextPage = () => {
   const [binaryMessage, setBinaryMessage] = useState<string>(convertToBinary(placeholderMessage))
 
   const convertMessage = (message: string) => setBinaryMessage(convertToBinary(message));
+
   return (
     <>
       <Head>
@@ -22,7 +23,7 @@ const Home: NextPage = () => {
         <Header />
         <TextContent placeholder={placeholderMessage} convertMessage={convertMessage} />
         <BinaryContent output={binaryMessage} />
-        <ShareOptions />
+        <ShareOptions message={binaryMessage} />
         <Footer />
 
       </main>
