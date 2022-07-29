@@ -23,40 +23,15 @@ class App extends React.Component{
   render() {
   return (
     <div className="App">
-      <Header />
       <div className="main_container">
         <TextContent input={this.state.input} handleChange={this.handleChange}/>
         <BinaryContent output={this.state.binary} />
         <ShareContainer email={this.state.email} />
       </div>
-      <Footer />
     </div>
     )
   }
 }
-
-class Header extends React.Component{
-  render() {
-    return (
-      <header className="title">
-        <h1>Geeky <span className="pink">Love</span> Letter</h1>
-        <p>because <span className="pink">NERD</span> is the new <span className="pink binary">01010011010001010101100001011001</span></p>
-      </header>
-    )
-  }
-}
-
-class Footer extends React.Component{
-  render() {
-    return (
-      <footer>
-        <p className="copyright">Made with <span className="pink binary">01101100011011110111011001100101</span></p>
-       <p> by <a href="https://kinalone.dev" target="_blank" rel="noopener noreferrer">MKS</a> | <a href="../license.txt" target="_blank" rel="noopener noreferrer">license</a></p>
-      </footer>
-    )
-  }
-}
-
 
 class TextContent extends React.Component{
   render() {
