@@ -1,7 +1,6 @@
 import React from 'react'
 import social from '../styles/Social.module.scss'
 
-
 const ShareOptions = ({message}: any) => {
   const email = `mailto:?subject=Here is a secret message written with geeky-love-letter&body=${message}`;
   const selectAndCopy = () => {

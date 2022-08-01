@@ -30,10 +30,36 @@
 .header__title {
   font-family: $press_start;
   margin-bottom: -1rem;
+  animation: pulsate 10s ease-in-out infinite alternate;  
+  
 }
 
 .footer {
   font-size: 0.8rem;
   margin: 0 1rem;
   text-align: center;
+}
+
+
+@keyframes pulsate {
+  100% {
+    /* Larger blur radius */
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px $primary_pink,
+      0 0 40px $primary_pink,
+      0 0 80px #f09,
+      0 0 90px #f09,
+  }
+ 75% {
+    /* A slightly smaller blur radius */
+    text-shadow:
+      0 0 4px #fff,
+      0 0 10px #fff,
+      0 0 18px $primary_pink,
+      0 0 38px $primary_pink,
+      0 0 73px #f09,
+      0 0 80px #f09,
+  }
 }
