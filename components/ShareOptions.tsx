@@ -1,11 +1,12 @@
 import React from 'react'
 import social from '../styles/Social.module.scss'
 
-const ShareOptions = ({message}: any) => {
+const ShareOptions = ({message, setDisplayAlert}: any) => {
   const email = `mailto:?subject=Here is a secret message written with geeky-love-letter&body=${message}`;
   const selectAndCopy = () => {
     navigator.clipboard.writeText(message)
-    alert('copied!')
+    setDisplayAlert(true);
+    setTimeout(() => setDisplayAlert(false), 4000)
   }
   return (
     <section className={social.container}>
