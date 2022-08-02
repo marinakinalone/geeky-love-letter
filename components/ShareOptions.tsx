@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { Dispatch, SetStateAction } from 'react'
 import social from '../styles/Social.module.scss'
+import { ShareOptionsProps } from '../utils/interface';
 
-const ShareOptions = ({message, setDisplayAlert}: any) => {
+
+const ShareOptions = ({message, setDisplayAlert}: ShareOptionsProps) => {
   const email = `mailto:?subject=Here is a secret message written with geeky-love-letter&body=${message}`;
   const selectAndCopy = () => {
     navigator.clipboard.writeText(message)

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import converter from '../styles/Converter.module.scss'
 import cx from 'classnames';
+import { TextContentProps } from '../utils/interface';
 
-
-const TextContent = ({placeholder, convertMessage}: any) => {
+const TextContent = ({placeholder, convertMessage}: TextContentProps) => {
   const [input, setInput] = useState<string>('')
   const handleChange = (content: string) => {
     setInput(content)
