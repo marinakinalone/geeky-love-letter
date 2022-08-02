@@ -10,7 +10,7 @@ const ShareOptions = ({message, setDisplayAlert}: any) => {
   }
   return (
     <section className={social.container}>
-        <button className={social.button__send}><a href={email}>send your letter</a></button>
+        <a className={social.button__send} href={email}>send your letter</a>
         <p>or <button onClick={selectAndCopy} className={social.button__copy}>copy binary version</button></p>
     </section>
   )

@@ -4,8 +4,14 @@
     }
   }
   
-  @mixin min_width_desktop {
-    @media screen and (min-width: "1024px") {
-      @content;
-    }
+@mixin min_width_desktop {
+  @media screen and (min-width: "1024px") {
+    @content;
   }
+}
+
+@mixin min_width_largedesktop {
+  @media screen and (min-width: "2000px") {
+    @content;
+  }
+}

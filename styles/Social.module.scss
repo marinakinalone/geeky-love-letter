@@ -4,7 +4,7 @@
 
 
   .container {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-align: center;
   }
 
@@ -13,36 +13,40 @@
     border: 2px solid $primary_pink;
     border-radius: 15px;
     background-color: $primary_black;
+    color: $primary_pink;
     cursor: pointer;
     font-family: $fira;
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 3.5rem;
     &:hover,
     &:focus,
     &:active {
       background-color: $primary_pink;
       box-shadow: 0px 0px 99px 2px $primary_pink;
-      a {
-        color: white;
-      }
+      color: $primary_black;
     }
-    a {
-      text-decoration: none;
-      color: $primary_pink;
+    &:focus {
+      outline: 2px solid white;
     }
   }
   
   .button__copy {
+    margin-top: 0.5rem;
     font-size: 1rem;
     border: none;
     text-decoration: underline;
     color: $primary_pink;
-    background-color: $primary_black;
+    background-color: inherit;
     cursor: pointer;
     font-family: $fira;
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active  {
       background-color: $primary_pink;
-      color: white;
+      color: $primary_black;
       box-shadow: 0px 0px 99px 2px $primary_pink;
+    }
+    &:focus {
+      outline: 2px solid white;
     }
   }
 
