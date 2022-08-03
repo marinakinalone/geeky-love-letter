@@ -33,8 +33,14 @@
 .header__title {
   font-family: $press_start;
   margin-bottom: -1rem;
-  animation: pulsate 10s ease-in-out infinite alternate;  
-  
+}
+
+.title__pink {
+  animation: pulsatePink 12s ease-in-out infinite alternate; 
+}
+
+.title__blue {
+  animation: pulsateBlue 12s ease-in-out infinite alternate; 
 }
 
 .footer {
@@ -63,23 +69,37 @@
 }
 
 
-@keyframes pulsate {
+@keyframes pulsatePink {
   100% {
-    /* Larger blur radius */
     text-shadow:
       0 0 4px #fff,
-      0 0 11px #fff,
-      0 0 19px $primary_pink,
+      0 0 11px $primary_pink,
+      0 0 19px #f09,
       0 0 40px #f09,
       0 0 80px #f09,
   }
  75% {
-    /* A slightly smaller blur radius */
     text-shadow:
       0 0 4px #fff,
-      0 0 10px #fff,
-      0 0 18px $primary_pink,
+      0 0 10px $primary_pink,
+      0 0 18px #f09,
       0 0 38px #f09,
       0 0 73px #f09,
   }
 }
+
+@keyframes pulsateBlue{
+  100% {
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px rgb(0, 163, 192),
+      0 0 16px rgb(0, 163, 192),
+  }
+ 75% {
+    text-shadow:
+      0 0 4px #fff,
+      0 0 10px rgb(0, 163, 192),
+      0 0 15px rgb(0, 163, 192),
+  }
+}
+
