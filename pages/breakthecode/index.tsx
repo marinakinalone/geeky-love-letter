@@ -21,16 +21,12 @@ const BreakTheCode: NextPage = () => {
   const [displayAlert, setDisplayAlert] = useState<boolean>(false)
 
   const translateMessage = (message: string) => {
-    console.log(message)
       const messageToTranslate = splitBinary(message);
       if (messageToTranslate !== undefined) {
-            const result = convertToText(messageToTranslate)
-            console.log("result: " + result)
             setTextMessage(convertToText(messageToTranslate));
         }
     }
     
-    console.log(textMessage)
   return (
     <>
       <Head>
@@ -42,7 +38,7 @@ const BreakTheCode: NextPage = () => {
         {displayAlert? (<CopiedAlert />):(<></>)}
         <Header />
         <InputContent placeholder={copywriting.placeholder} convertMessage={translateMessage} title={copywriting.inputContainerTitle} label={copywriting.inputContainerLabel} />
-        <OutputContent output={textMessage} title={copywriting.outputContainerTitle} label={copywriting.outputContainerLabel} />
+        <OutputContent output={textMessage} title={copywriting.outputContainerTitle} label={copywriting.outputContainerLabel} type={"text"} />
         <CopyMessage message={textMessage} setDisplayAlert={setDisplayAlert} />
         <Footer routeMessage={'want to write a secret message?'} route={'/'} />
 

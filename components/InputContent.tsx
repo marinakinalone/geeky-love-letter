@@ -13,7 +13,7 @@ const InputContent = ({placeholder, convertMessage, title, label}: InputContentP
   return (
     <section className={converter.container}>
       <h2 className={converter.container__title} >{title}</h2>
-      <textarea className={cx(converter.container__content, converter.content__text)} id="input" name="input" placeholder={placeholder} onChange={(e) => handleChange(e.target.value)} value={input}>
+      <textarea className={cx(converter.container__content, converter.content__input)} id="input" name="input" placeholder={placeholder} onChange={(e) => handleChange(e.target.value)} value={input}>
       </textarea>
       <label htmlFor="input">{label}</label>
     </section>

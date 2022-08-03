@@ -31,7 +31,7 @@ const Home: NextPage = () => {
         {displayAlert? (<CopiedAlert />):(<></>)}
         <Header />
         <InputContent placeholder={copywriting.placeholder} convertMessage={convertMessage} title={copywriting.inputContainerTitle} label={copywriting.inputContainerLabel} />
-        <OutputContent output={binaryMessage} title={copywriting.outputContainerTitle} label={copywriting.outputContainerLabel} />
+        <OutputContent output={binaryMessage} title={copywriting.outputContainerTitle} label={copywriting.outputContainerLabel} type={"binary"} />
         <ShareOptions message={binaryMessage} setDisplayAlert={setDisplayAlert} />
         <Footer routeMessage={'got a binary message to convert?'} route={'/breakthecode'} />
 

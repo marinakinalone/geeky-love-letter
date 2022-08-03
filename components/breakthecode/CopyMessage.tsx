@@ -11,7 +11,7 @@ const CopyMessage = ({message, setDisplayAlert}: ShareOptionsProps) => {
   }
   return (
     <section className={social.container}>
-        <button onClick={selectAndCopy} className={social.button__copy}>copy your message</button>
+        <button onClick={selectAndCopy} className={social.button__send}>copy your message</button>
     </section>
   )
 }

@@ -4,6 +4,7 @@ export interface OutputContentProps {
     output: string
     title: string
     label: string
+    type: string
 }
 
 export interface InputContentProps {

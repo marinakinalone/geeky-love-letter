@@ -15,7 +15,7 @@
     margin-bottom: 0;
 }
 
-.container__binary {
+.container__output {
     margin-bottom: 2.5rem;
 }
 
@@ -29,22 +29,17 @@
     height: 15rem;
 }
 
-.content__text {
+.content__input {
     background-color: $primary_black;
     color: $primary_blue;
     border: 2px solid $primary_blue;
 }
 
-.content__binary {
+.content__output {
     color: $primary_black;
     background-color: $secondary_purple;
     border: 2px solid $secondary_purple;
     @include min_width_tablet(){
         max-width: 95%;
     }
-}
-
-.title__binary {
-    color: $secondary_purple;
-
 }
