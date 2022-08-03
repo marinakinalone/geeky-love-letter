@@ -1,12 +1,16 @@
 import React, { Dispatch, SetStateAction } from 'react'
 
-export interface BinaryContentProps {
+export interface OutputContentProps {
     output: string
+    title: string
+    label: string
 }
 
-export interface TextContentProps {
+export interface InputContentProps {
     placeholder: string
     convertMessage: (message: string) => void
+    title: string
+    label: string
 }
 
 export interface ShareOptionsProps {

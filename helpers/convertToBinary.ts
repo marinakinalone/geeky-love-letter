@@ -4,7 +4,7 @@ const convertToBinary = (input: string) => {
         const bin = input[i].charCodeAt(0).toString(2);
         output.push(Array(8 - bin.length + 1 ).join("0") + bin)
     }
-    return output.join(" ")
+    return output.join("")
 }
 
 export default convertToBinary

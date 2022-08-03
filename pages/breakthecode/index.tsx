@@ -1,18 +1,36 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { Header, Footer, TextContent, BinaryContent, ShareOptions, CopiedAlert} from '../../components/index'
+import { Header, Footer, InputContent, OutputContent, CopiedAlert} from '../../components/index'
+import { CopyMessage } from '../../components/breakthecode/index'
 import { useState } from 'react'
-import convertToBinary from '../../helpers/convertToBinary'
+import { convertToText } from '../../helpers/convertToText'
+import { splitBinary } from '../../helpers/splitBinary'
 
 import styles from '../../styles/Home.module.scss'
 
 const BreakTheCode: NextPage = () => {
-  const placeholderMessage = "Write a secret love letter to your nerd crush and send them the binary version."
-  const [binaryMessage, setBinaryMessage] = useState<string>(convertToBinary(placeholderMessage))
+    const copywriting = {
+        placeholder: 'Paste your binary message here',
+        inputContainerTitle: 'binary editor',
+        inputContainerLabel: 'binary message to be converted to text',
+        outputContainerTitle: 'text generator',
+        outputContainerLabel: 'text generated from the binary editor'
+      }
+      
+  const [textMessage, setTextMessage] = useState<string>("")
   const [displayAlert, setDisplayAlert] = useState<boolean>(false)
 
-  const convertMessage = (message: string) => setBinaryMessage(convertToBinary(message));
-
+  const translateMessage = (message: string) => {
+    console.log(message)
+      const messageToTranslate = splitBinary(message);
+      if (messageToTranslate !== undefined) {
+            const result = convertToText(messageToTranslate)
+            console.log("result: " + result)
+            setTextMessage(convertToText(messageToTranslate));
+        }
+    }
+    
+    console.log(textMessage)
   return (
     <>
       <Head>
@@ -23,9 +41,9 @@ const BreakTheCode: NextPage = () => {
       <main className={styles.main}>
         {displayAlert? (<CopiedAlert />):(<></>)}
         <Header />
-        <BinaryContent output={binaryMessage} />
-        <TextContent placeholder={placeholderMessage} convertMessage={convertMessage} />
-        <ShareOptions message={binaryMessage} setDisplayAlert={setDisplayAlert} />
+        <InputContent placeholder={copywriting.placeholder} convertMessage={translateMessage} title={copywriting.inputContainerTitle} label={copywriting.inputContainerLabel} />
+        <OutputContent output={textMessage} title={copywriting.outputContainerTitle} label={copywriting.outputContainerLabel} />
+        <CopyMessage message={textMessage} setDisplayAlert={setDisplayAlert} />
         <Footer routeMessage={'want to write a secret message?'} route={'/'} />
 
       </main>

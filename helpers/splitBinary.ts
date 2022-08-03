@@ -1,0 +1,1 @@
+export const splitBinary = (input: string) => input.match(/.{1,8}/g)?.join(" ")
