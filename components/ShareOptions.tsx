@@ -4,7 +4,7 @@ import { ShareOptionsProps } from '../utils/interface';
 
 
 const ShareOptions = ({message, setDisplayAlert}: ShareOptionsProps) => {
-  const email = `mailto:?subject=Here is a secret message written with geeky-love-letter&body=${message}`;
+  const email = `mailto:?subject=Here is a secret message written with geeky-love-letter&body=${message} => Want to know what the message is about? go to https://geeky-love-letter.vercel.app/breakthecode`;
   const selectAndCopy = () => {
     navigator.clipboard.writeText(message)
     setDisplayAlert(true);
