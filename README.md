@@ -26,6 +26,7 @@ npm run dev
 
 ## What I have learned from this project
 I decided to refactor a few of my projects from when I started to learn to code. Geeky Love Letter was my second ever project while learning React JS. It is a continuation of what I have started to practice when I refactored [the Sailor Moon Quote Machine](https://sailor-moon-quote-machine.vercel.app/) : to get more comfortable with Next JS and CSS modules.
+I also worked a little bit with CSS animations (just because I love that!)
 
 ## Team
 
