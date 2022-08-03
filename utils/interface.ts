@@ -13,3 +13,8 @@ export interface ShareOptionsProps {
   message: string
   setDisplayAlert: Dispatch<SetStateAction<boolean>>
 }
+
+export interface FooterProps {
+    routeMessage: string
+    route: string
+}

@@ -1,12 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { Header, Footer, TextContent, BinaryContent, ShareOptions, CopiedAlert} from '../components/index'
+import { Header, Footer, TextContent, BinaryContent, ShareOptions, CopiedAlert} from '../../components/index'
 import { useState } from 'react'
-import convertToBinary from '../helpers/convertToBinary'
+import convertToBinary from '../../helpers/convertToBinary'
 
-import styles from '../styles/Home.module.scss'
+import styles from '../../styles/Home.module.scss'
 
-const Home: NextPage = () => {
+const BreakTheCode: NextPage = () => {
   const placeholderMessage = "Write a secret love letter to your nerd crush and send them the binary version."
   const [binaryMessage, setBinaryMessage] = useState<string>(convertToBinary(placeholderMessage))
   const [displayAlert, setDisplayAlert] = useState<boolean>(false)
@@ -23,14 +23,14 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         {displayAlert? (<CopiedAlert />):(<></>)}
         <Header />
-        <TextContent placeholder={placeholderMessage} convertMessage={convertMessage} />
         <BinaryContent output={binaryMessage} />
+        <TextContent placeholder={placeholderMessage} convertMessage={convertMessage} />
         <ShareOptions message={binaryMessage} setDisplayAlert={setDisplayAlert} />
-        <Footer routeMessage={'got a binary message to convert?'} route={'/breakthecode'} />
+        <Footer routeMessage={'want to write a secret message?'} route={'/'} />
 
       </main>
     </>
   )
 }
 
-export default Home
+export default BreakTheCode
