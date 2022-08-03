@@ -19,8 +19,11 @@ npm i
 npm run dev
 ```
 ## What's next to do?
-- add an option to reverse the converter from binary to text (and finally translate those "super secret" messages ;) )
-- maybe add more animations?
+- when someone write "love" or "like", add a "heart" animation
+- improve the email interaction
+- change favicon
+- add error handling for the binary editor
+
 ## What I have learned from this project
 I decided to refactor a few of my projects from when I started to learn to code. Geeky Love Letter was my second ever project while learning React JS. It is a continuation of what I have started to practice when I refactored [the Sailor Moon Quote Machine](https://sailor-moon-quote-machine.vercel.app/) : to get more comfortable with Next JS and CSS modules.
 
